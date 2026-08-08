@@ -10,3 +10,4 @@ I am learning python by working through the Udemy course [100 Days of Code: The 
 -   [Day 3]Control Flow and Logical Operators
 -   [Day 4] Randomisation and Python Lists
 -   [Day 5] Python Loops
+-   [Day6] Python Functions & Karel
