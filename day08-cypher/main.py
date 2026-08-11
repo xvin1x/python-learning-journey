@@ -11,8 +11,6 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 def caesar(original_text, shift_amount, encode_or_decode):
     output_text = ""
 
-
-
     if encode_or_decode == "decode":
         shift_amount *= -1
 
@@ -36,6 +34,3 @@ while not game_over:
     restart = input("Would you like to decode/encrypt more? (Y/N)")
     if restart.lower() == "n":
         game_over = True
-
-
-
