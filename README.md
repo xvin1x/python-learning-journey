@@ -13,3 +13,5 @@ I am learning python by working through the Udemy course [100 Days of Code: The 
 -   [Day 6] Python Functions & Karel
 -   [Day 7] Hangman
 -   [Day 8] Function Parameters & Caesar Cipher
+-   [Day 9] Dictionaries, Nesting and the Secret Auction
+-   [Day 10] Functions with Outputs
