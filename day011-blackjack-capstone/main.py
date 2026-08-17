@@ -6,9 +6,9 @@ dealer_total = 0
 user_total = 0
 
 
-def deal(user_or_dealer, amount_cards=1 ):
+def deal(user_or_dealer, amount_cards=1):
     cards_dealt = (random.sample(cards, k=amount_cards))
-    player = user_or_dealer.extend(cards_dealt)
+    user_or_dealer.extend(cards_dealt)
     return cards_dealt
 
 
@@ -22,7 +22,7 @@ def calculate_score(user_or_dealer):
 def hit_or_stand(user_or_dealer):
     hit = True
     while hit:
-        choice = input("Type 'y' to get another card, type 'n' to pass: " ).lower()
+        choice = input("Type 'y' to get another card, type 'n' to pass: ").lower()
 
         if choice == 'y':
             deal(user_or_dealer)
@@ -41,9 +41,6 @@ def hit_or_stand(user_or_dealer):
         # print(total)
         if choice == 'n':
             hit = False
-
-
-start_game = True
 
 
 def dealer_turn(dealer):
@@ -69,11 +66,14 @@ def compare_score():
         return f"DRAW"
 
 
+start_game = True
+
+
 while start_game:
     dealer = []
     user = []
-    start_game = input("Do you want to play a game of Blackjack Type 'y' or 'n': ").lower()
-    if start_game == 'y':
+    play = input("Do you want to play a game of Blackjack Type 'y' or 'n': ").lower()
+    if play == 'y':
         deal(user, 2)
         deal(dealer, 2)
         dealer_total = calculate_score(dealer)
@@ -81,18 +81,33 @@ while start_game:
         print(f"Dealer's first card: {dealer[0]}")
         if len(dealer) == 2 and sum(dealer) == 21:
             print("BLACK JACK")
+            start_game = False
             continue
+
         if len(user) == 2 and sum(user) == 21:
             print("BLACK JACK")
+            start_game = False
+
         elif calculate_score(user) < 21:
             result = hit_or_stand(user)
+
             if result == "YOU WIN!":
+                print(f"Your final hand: {user}, final score: {calculate_score(user)}")
+                print(f"Dealer's final hand: {dealer}, final score: {calculate_score(dealer)}")
                 print(result)
+                start_game = False
+
             elif result == "YOU BUSTED! YOU LOSE":
+                print(f"Your final hand: {user}, final score: {calculate_score(user)}")
+                print(f"Dealer's final hand: {dealer}, final score: {calculate_score(dealer)}")
                 print(result)
+                start_game = False
+
             else:
                 dealer_turn(dealer)
+                print(f"Your final hand: {user}, final score: {calculate_score(user)}")
+                print(f"Dealer's final hand: {dealer}, final score: {calculate_score(dealer)}")
                 print(compare_score())
 
-    if start_game == 'n':
-        quit()
+    if play == 'n':
+        start_game = False
