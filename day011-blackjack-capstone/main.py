@@ -1,4 +1,5 @@
 import random
+import art
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
@@ -68,12 +69,13 @@ def compare_score():
 
 start_game = True
 
-
 while start_game:
     dealer = []
     user = []
     play = input("Do you want to play a game of Blackjack Type 'y' or 'n': ").lower()
     if play == 'y':
+        print("\n" * 50)
+        print(art.logo)
         deal(user, 2)
         deal(dealer, 2)
         dealer_total = calculate_score(dealer)
