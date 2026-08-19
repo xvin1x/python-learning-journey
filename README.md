@@ -15,3 +15,7 @@ I am learning python by working through the Udemy course [100 Days of Code: The 
 -   [Day 8] Function Parameters & Caesar Cipher
 -   [Day 9] Dictionaries, Nesting and the Secret Auction
 -   [Day 10] Functions with Outputs
+-   [Day 11] Blackjack Capstone
+-   [Day 12] Scope & Number Guessing Game
+-   [Day 13] Debugging: How to Find and Fix Errors in your Code
+
