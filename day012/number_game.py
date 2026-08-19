@@ -7,7 +7,7 @@ difficulties = {
 
 
 def difficulty(choice):
-    return (difficulties[choice])
+    return difficulties[choice]
 
 
 def guess(guess_numb, number):
