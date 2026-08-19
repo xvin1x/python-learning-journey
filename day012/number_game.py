@@ -22,7 +22,7 @@ def guess(guess_numb, number):
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100")
 number = random.randint(1, 100)
-print(number)
+# print(number)
 
 choice = input("Choose a difficulty. Type 'easy' or 'hard': ")
 attempts = difficulty(choice)
