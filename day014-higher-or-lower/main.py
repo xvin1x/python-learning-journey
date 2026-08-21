@@ -14,7 +14,7 @@ def pick_accounts():
 
 
 def compare():
-    choice = input("Who has more followers? 'A' or 'B'").capitalize()
+    choice = input("Who has more followers? 'A' or 'B'").upper()
     if choice == 'A':
         if account_a["follower_count"] > account_b["follower_count"]:
             return account_a
