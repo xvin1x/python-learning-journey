@@ -18,4 +18,5 @@ I am learning python by working through the Udemy course [100 Days of Code: The 
 -   [Day 11] Blackjack Capstone
 -   [Day 12] Scope & Number Guessing Game
 -   [Day 13] Debugging: How to Find and Fix Errors in your Code
+-   [Day 14] Higher Lower Game
 
