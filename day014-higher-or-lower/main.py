@@ -41,13 +41,13 @@ while playing:
 
     if result == account_a or result == account_b:
         score += 1
+        print("\n" * 20)
         print(f"You're right! Score: {score}")
         account_a = result
         accounts = pick_accounts()
         account_b = accounts[1]
         if account_a == account_b:
             account_b = accounts[0]
-        print("\n" * 20)
     else:
         playing = False
         print(f"Sorry, that's wrong. Final score: {score}")
